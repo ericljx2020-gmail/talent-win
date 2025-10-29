@@ -1,12 +1,15 @@
 import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Stats.css'
 
 function Stats() {
+  const { t } = useLanguage()
+  
   const stats = [
-    { number: '500+', label: 'Companies Served' },
-    { number: '5000+', label: 'Placements Made' },
-    { number: '95%', label: 'Client Satisfaction' },
-    { number: '15+', label: 'Years Experience' }
+    { number: '500+', label: t.stats.companies },
+    { number: '5000+', label: t.stats.placements },
+    { number: '95%', label: t.stats.satisfaction },
+    { number: '15+', label: t.stats.experience }
   ]
 
   return (

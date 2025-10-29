@@ -1,7 +1,9 @@
 import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Footer.css'
 
 function Footer() {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -13,49 +15,49 @@ function Footer() {
             <span className="logo-text">TalentWin</span>
           </div>
           <p className="footer-description">
-            Connecting exceptional talent with outstanding opportunities since 2010.
+            {t.footer.description}
           </p>
         </div>
 
         <div className="footer-section">
-          <h3>Services</h3>
+          <h3>{t.footer.services.title}</h3>
           <ul>
-            <li><a href="#services">Executive Search</a></li>
-            <li><a href="#services">Permanent Placement</a></li>
-            <li><a href="#services">Contract Staffing</a></li>
-            <li><a href="#services">Graduate Recruitment</a></li>
+            <li><a href="#services">{t.footer.services.executiveSearch}</a></li>
+            <li><a href="#services">{t.footer.services.permanentPlacement}</a></li>
+            <li><a href="#services">{t.footer.services.contractStaffing}</a></li>
+            <li><a href="#services">{t.footer.services.graduateRecruitment}</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h3>Company</h3>
+          <h3>{t.footer.company.title}</h3>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="#about">{t.footer.company.about}</a></li>
+            <li><a href="#services">{t.footer.company.services}</a></li>
+            <li><a href="#contact">{t.footer.company.contact}</a></li>
+            <li><a href="#">{t.footer.company.careers}</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
-          <h3>Contact</h3>
+          <h3>{t.footer.contactInfo.title}</h3>
           <ul>
-            <li>123 Business Ave, Suite 100</li>
-            <li>New York, NY 10001</li>
-            <li>hello@talentwin.com</li>
-            <li>+1 (555) 123-4567</li>
+            <li>{t.footer.contactInfo.address}</li>
+            <li>{t.footer.contactInfo.city}</li>
+            <li>{t.footer.contactInfo.email}</li>
+            <li>{t.footer.contactInfo.phone}</li>
           </ul>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} TalentWin. All rights reserved.</p>
+        <p>&copy; {currentYear} {t.footer.copyright}</p>
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
+          <a href="#">{t.footer.privacy}</a>
           <span>•</span>
-          <a href="#">Terms of Service</a>
+          <a href="#">{t.footer.terms}</a>
           <span>•</span>
-          <a href="#">Cookie Policy</a>
+          <a href="#">{t.footer.cookies}</a>
         </div>
       </div>
     </footer>

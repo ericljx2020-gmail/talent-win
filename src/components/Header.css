@@ -76,6 +76,29 @@
   width: 100%;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-toggle {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.language-toggle:hover {
+  background: #e9ecef;
+  border-color: #ccc;
+}
+
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -83,6 +106,7 @@
   font-size: 1.5rem;
   color: #333;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 /* Responsive Design */
@@ -116,6 +140,11 @@
     padding: 0.5rem 0;
     width: 100%;
     text-align: center;
+  }
+
+  .language-toggle {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 

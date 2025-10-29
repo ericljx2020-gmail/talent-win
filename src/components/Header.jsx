@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Header.css'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { language, toggleLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,19 +33,29 @@ function Header() {
         </div>
         
         <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-          <a onClick={() => scrollToSection('hero')}>Home</a>
-          <a onClick={() => scrollToSection('services')}>Services</a>
-          <a onClick={() => scrollToSection('about')}>About</a>
-          <a onClick={() => scrollToSection('contact')}>Contact</a>
+          <a onClick={() => scrollToSection('hero')}>{t.header.home}</a>
+          <a onClick={() => scrollToSection('services')}>{t.header.services}</a>
+          <a onClick={() => scrollToSection('about')}>{t.header.about}</a>
+          <a onClick={() => scrollToSection('contact')}>{t.header.contact}</a>
         </nav>
 
-        <button 
-          className="mobile-menu-toggle"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? '✕' : '☰'}
-        </button>
+        <div className="header-actions">
+          <button 
+            className="language-toggle"
+            onClick={toggleLanguage}
+            aria-label="Toggle language"
+          >
+            {language === 'en' ? '中文' : 'EN'}
+          </button>
+          
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
       </div>
     </header>
   )

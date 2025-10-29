@@ -1,7 +1,10 @@
 import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Hero.css'
 
 function Hero() {
+  const { t } = useLanguage()
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact')
     if (element) {
@@ -14,42 +17,41 @@ function Hero() {
       <div className="hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
-            We help our clients change the world, one leadership team at a time
+            {t.hero.title}
           </h1>
           <p className="hero-description">
-            Connecting exceptional leaders with transformative opportunities. 
-            Our executive search and leadership advisory services drive organizational excellence across industries.
+            {t.hero.description}
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={scrollToContact}>
-              Contact Us
+              {t.hero.contactUs}
             </button>
             <button className="btn btn-secondary" onClick={() => {
               const element = document.getElementById('services')
               if (element) element.scrollIntoView({ behavior: 'smooth' })
             }}>
-              Our Services
+              {t.hero.ourServices}
             </button>
           </div>
         </div>
         <div className="hero-visual">
           <img 
             src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" 
-            alt="Professional team collaboration"
+            alt={t.hero.imageAlt}
             className="hero-image"
           />
           <div className="hero-card card-1">
             <div className="card-icon">📊</div>
             <div className="card-text">
-              <h3>500+ Companies Served</h3>
-              <p>Global reach, local expertise</p>
+              <h3>{t.hero.companiesServed}</h3>
+              <p>{t.hero.companiesDesc}</p>
             </div>
           </div>
           <div className="hero-card card-2">
             <div className="card-icon">⭐</div>
             <div className="card-text">
-              <h3>95% Success Rate</h3>
-              <p>Long-term placements</p>
+              <h3>{t.hero.successRate}</h3>
+              <p>{t.hero.successDesc}</p>
             </div>
           </div>
         </div>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Contact.css'
 
 function Contact() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -83,9 +85,9 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <h2 className="section-title">Get In Touch</h2>
+      <h2 className="section-title">{t.contact.title}</h2>
       <p className="section-subtitle">
-        Ready to find your next great hire or career opportunity? Let's talk.
+        {t.contact.subtitle}
       </p>
 
       <div className="contact-content">
@@ -93,29 +95,44 @@ function Contact() {
           <div className="info-item">
             <div className="info-icon">📍</div>
             <div>
-              <h3>Location</h3>
-              <p>123 Business Ave, Suite 100<br />New York, NY 10001</p>
+              <h3>{t.contact.location}</h3>
+              <p>{t.contact.locationAddress.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < t.contact.locationAddress.split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}</p>
             </div>
           </div>
 
           <div className="info-item">
             <div className="info-icon">📧</div>
             <div>
-              <h3>Email</h3>
-              <p>hello@talentwin.com<br />careers@talentwin.com</p>
+              <h3>{t.contact.email}</h3>
+              <p>{t.contact.emailAddresses.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < t.contact.emailAddresses.split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}</p>
             </div>
           </div>
 
           <div className="info-item">
             <div className="info-icon">📞</div>
             <div>
-              <h3>Phone</h3>
-              <p>+1 (555) 123-4567<br />Mon-Fri, 9am-6pm EST</p>
+              <h3>{t.contact.phone}</h3>
+              <p>{t.contact.phoneNumbers.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < t.contact.phoneNumbers.split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}</p>
             </div>
           </div>
 
           <div className="social-links">
-            <h3>Follow Us</h3>
+            <h3>{t.contact.followUs}</h3>
             <div className="social-icons">
               <a href="#" className="social-icon">LinkedIn</a>
               <a href="#" className="social-icon">Twitter</a>
@@ -127,7 +144,7 @@ function Contact() {
         <form className="contact-form" onSubmit={handleSubmit}>
           {submitted && (
             <div className="success-message">
-              Thank you! We'll be in touch soon.
+              {t.contact.form.successMessage}
             </div>
           )}
 
@@ -138,7 +155,7 @@ function Contact() {
           )}
           
           <div className="form-group">
-            <label htmlFor="name">Name *</label>
+            <label htmlFor="name">{t.contact.form.name} *</label>
             <input
               type="text"
               id="name"
@@ -146,12 +163,12 @@ function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              placeholder="Your full name"
+              placeholder={t.contact.form.namePlaceholder}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Email *</label>
+            <label htmlFor="email">{t.contact.form.email} *</label>
             <input
               type="email"
               id="email"
@@ -159,24 +176,24 @@ function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              placeholder="your.email@company.com"
+              placeholder={t.contact.form.emailPlaceholder}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="company">Company</label>
+            <label htmlFor="company">{t.contact.form.company}</label>
             <input
               type="text"
               id="company"
               name="company"
               value={formData.company}
               onChange={handleChange}
-              placeholder="Your company name"
+              placeholder={t.contact.form.companyPlaceholder}
             />
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Message *</label>
+            <label htmlFor="message">{t.contact.form.message} *</label>
             <textarea
               id="message"
               name="message"
@@ -184,12 +201,12 @@ function Contact() {
               onChange={handleChange}
               required
               rows="5"
-              placeholder="Tell us about your needs..."
+              placeholder={t.contact.form.messagePlaceholder}
             />
           </div>
 
           <button type="submit" className="submit-btn" disabled={loading}>
-            {loading ? 'Sending...' : 'Send Message'}
+            {loading ? t.contact.form.sending : t.contact.form.submit}
           </button>
         </form>
       </div>

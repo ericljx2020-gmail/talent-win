@@ -1,27 +1,30 @@
 import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './About.css'
 
 function About() {
+  const { t } = useLanguage()
+  
   const values = [
     {
       icon: '🌟',
-      title: 'Excellence',
-      description: 'We pursue the highest standards in every placement'
+      title: t.about.values.excellence.title,
+      description: t.about.values.excellence.description
     },
     {
       icon: '🤝',
-      title: 'Integrity',
-      description: 'Honest, transparent relationships built on trust'
+      title: t.about.values.integrity.title,
+      description: t.about.values.integrity.description
     },
     {
       icon: '🎯',
-      title: 'Results',
-      description: 'Focused on delivering measurable outcomes'
+      title: t.about.values.results.title,
+      description: t.about.values.results.description
     },
     {
       icon: '💡',
-      title: 'Innovation',
-      description: 'Leveraging technology for smarter recruitment'
+      title: t.about.values.innovation.title,
+      description: t.about.values.innovation.description
     }
   ]
 
@@ -30,30 +33,25 @@ function About() {
       <div className="about-image-section">
         <img 
           src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80" 
-          alt="Our team"
+          alt={t.about.imageAlt}
           className="about-hero-image"
         />
         <div className="about-overlay">
-          <h2 className="about-overlay-title">Our Purpose, Vision, and Values</h2>
+          <h2 className="about-overlay-title">{t.about.overlayTitle}</h2>
         </div>
       </div>
       
       <div className="about-content">
         <div className="about-text">
-          <h2 className="section-title left-align">About TalentWin</h2>
+          <h2 className="section-title left-align">{t.about.title}</h2>
           <p className="about-description">
-            With over 15 years of experience in executive search and recruitment, 
-            TalentWin has become a trusted partner for organizations seeking 
-            exceptional talent.
+            {t.about.description1}
           </p>
           <p className="about-description">
-            Our team of seasoned consultants brings deep industry expertise and 
-            an extensive network of top-tier professionals. We don't just fill 
-            positions – we forge long-term partnerships that drive business success.
+            {t.about.description2}
           </p>
           <p className="about-description">
-            Whether you're a growing startup or an established enterprise, we 
-            have the expertise and resources to meet your unique hiring needs.
+            {t.about.description3}
           </p>
         </div>
 
