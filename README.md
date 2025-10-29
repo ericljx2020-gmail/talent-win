@@ -95,6 +95,45 @@ The form will work without setup (demo mode), but emails won't actually be sent 
 - Vite
 - CSS3 (with modern features like Grid, Flexbox, animations)
 
+## Docker Deployment
+
+The project includes Docker support for easy deployment to any server.
+
+### Quick Start with Docker
+
+```bash
+# Build and run
+docker-compose up -d
+
+# Access at http://localhost:8080
+```
+
+### Production Deployment
+
+**English:** See `DEPLOYMENT.md` for detailed instructions on:
+- Deploying to AWS, DigitalOcean, Google Cloud, **Alibaba Cloud**, etc.
+- Setting up SSL/HTTPS
+- Using custom domains
+- Zero-downtime updates
+- Monitoring and troubleshooting
+
+**中文：** 阿里云部署请查看 `阿里云部署快速指南.md`：
+- 完整的阿里云ECS部署步骤
+- 容器镜像服务ACR使用方法
+- 域名配置和SSL证书
+- 性能优化和成本控制
+- 常见问题解决方案
+
+### Deployment Scripts
+
+```bash
+# General deployment (interactive)
+./deploy.sh
+
+# Alibaba Cloud specific (阿里云专用)
+./deploy-aliyun.sh
+```
+
 ## License
 
 MIT
