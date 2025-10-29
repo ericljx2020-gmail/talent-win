@@ -8,8 +8,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install dependencies (需要dev依赖来构建)
+RUN npm ci
 
 # Copy source code
 COPY . .
