@@ -1,87 +1,9 @@
-import React, { useState } from 'react'
-import emailjs from '@emailjs/browser'
+import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import './Contact.css'
 
 function Contact() {
   const { t } = useLanguage()
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  })
-
-  const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setError(null)
-
-    // EmailJS configuration
-    // TODO: Replace these with your actual EmailJS credentials
-    const SERVICE_ID = 'YOUR_SERVICE_ID'
-    const TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
-
-    // Check if EmailJS is configured
-    if (SERVICE_ID === 'YOUR_SERVICE_ID' || !SERVICE_ID) {
-      console.log('Form Data:', formData)
-      setError('EmailJS is not configured yet. See console for form data.')
-      setLoading(false)
-      
-      // For demo purposes, show success message
-      setTimeout(() => {
-        setError(null)
-        setSubmitted(true)
-        setTimeout(() => {
-          setSubmitted(false)
-          setFormData({ name: '', email: '', company: '', message: '' })
-        }, 3000)
-      }, 1000)
-      return
-    }
-
-    // Send email using EmailJS
-    emailjs.send(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        company: formData.company,
-        message: formData.message,
-        to_email: 'your-email@example.com' // Your receiving email
-      },
-      PUBLIC_KEY
-    )
-    .then((response) => {
-      console.log('SUCCESS!', response.status, response.text)
-      setLoading(false)
-      setSubmitted(true)
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setSubmitted(false)
-        setFormData({ name: '', email: '', company: '', message: '' })
-      }, 3000)
-    })
-    .catch((err) => {
-      console.error('FAILED...', err)
-      setLoading(false)
-      setError('Failed to send message. Please try again.')
-    })
-  }
 
   return (
     <section className="contact" id="contact">
@@ -90,129 +12,79 @@ function Contact() {
         {t.contact.subtitle}
       </p>
 
-      <div className="contact-content">
-        <div className="contact-info">
+      <div className="contact-container">
+        <div className="contact-card general-info">
+          <h3>{t.contact.generalTitle}</h3>
           <div className="info-item">
-            <div className="info-icon">📍</div>
+            <div className="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
             <div>
-              <h3>{t.contact.location}</h3>
-              <p>{t.contact.locationAddress.split('\n').map((line, i) => (
-                <React.Fragment key={i}>
-                  {line}
-                  {i < t.contact.locationAddress.split('\n').length - 1 && <br />}
-                </React.Fragment>
-              ))}</p>
+              <h3>Tele</h3>
+              <p>{t.contact.general.tele}</p>
             </div>
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📧</div>
-            <div>
-              <h3>{t.contact.email}</h3>
-              <p>{t.contact.emailAddresses.split('\n').map((line, i) => (
-                <React.Fragment key={i}>
-                  {line}
-                  {i < t.contact.emailAddresses.split('\n').length - 1 && <br />}
-                </React.Fragment>
-              ))}</p>
+            <div className="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
             </div>
-          </div>
-
-          <div className="info-item">
-            <div className="info-icon">📞</div>
             <div>
-              <h3>{t.contact.phone}</h3>
-              <p>{t.contact.phoneNumbers.split('\n').map((line, i) => (
-                <React.Fragment key={i}>
-                  {line}
-                  {i < t.contact.phoneNumbers.split('\n').length - 1 && <br />}
-                </React.Fragment>
-              ))}</p>
-            </div>
-          </div>
-
-          <div className="social-links">
-            <h3>{t.contact.followUs}</h3>
-            <div className="social-icons">
-              <a href="#" className="social-icon">LinkedIn</a>
-              <a href="#" className="social-icon">Twitter</a>
-              <a href="#" className="social-icon">Facebook</a>
+              <h3>Web</h3>
+              <p>{t.contact.general.web}</p>
             </div>
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
-          {submitted && (
-            <div className="success-message">
-              {t.contact.form.successMessage}
+        <div className="contact-card key-contact">
+          <h3>{t.contact.keyContact.title}</h3>
+          <div className="contact-person">
+            <p className="person-name">{t.contact.keyContact.name}</p>
+            
+            <div className="info-item small">
+              <div className="info-icon small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <p>{t.contact.keyContact.location}</p>
             </div>
-          )}
 
-          {error && (
-            <div className="error-message">
-              {error}
+            <div className="info-item small">
+              <div className="info-icon small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <p>{t.contact.keyContact.cell}</p>
             </div>
-          )}
-          
-          <div className="form-group">
-            <label htmlFor="name">{t.contact.form.name} *</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder={t.contact.form.namePlaceholder}
-            />
-          </div>
 
-          <div className="form-group">
-            <label htmlFor="email">{t.contact.form.email} *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder={t.contact.form.emailPlaceholder}
-            />
+            <div className="info-item small">
+              <div className="info-icon small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <p>{t.contact.keyContact.email}</p>
+            </div>
           </div>
-
-          <div className="form-group">
-            <label htmlFor="company">{t.contact.form.company}</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-              placeholder={t.contact.form.companyPlaceholder}
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="message">{t.contact.form.message} *</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="5"
-              placeholder={t.contact.form.messagePlaceholder}
-            />
-          </div>
-
-          <button type="submit" className="submit-btn" disabled={loading}>
-            {loading ? t.contact.form.sending : t.contact.form.submit}
-          </button>
-        </form>
+        </div>
+      </div>
+      
+      <div className="contact-closing">
+        <p>{t.contact.closing}</p>
       </div>
     </section>
   )
 }
 
 export default Contact
-

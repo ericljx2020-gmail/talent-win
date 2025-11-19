@@ -41,14 +41,24 @@ function Hero() {
             className="hero-image"
           />
           <div className="hero-card card-1">
-            <div className="card-icon">📊</div>
+            <div className="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
             <div className="card-text">
               <h3>{t.hero.companiesServed}</h3>
               <p>{t.hero.companiesDesc}</p>
             </div>
           </div>
           <div className="hero-card card-2">
-            <div className="card-icon">⭐</div>
+            <div className="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
             <div className="card-text">
               <h3>{t.hero.successRate}</h3>
               <p>{t.hero.successDesc}</p>

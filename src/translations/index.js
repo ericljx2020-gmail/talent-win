@@ -89,29 +89,21 @@ export const translations = {
     
     // Contact Section
     contact: {
-      title: 'Get In Touch',
-      subtitle: 'Ready to find the right talent or explore your next career opportunity? Let\'s connect.',
-      location: 'Location',
-      locationAddress: 'Shanghai, China\nBeijing, China',
-      email: 'Email',
-      emailAddresses: 'hello@talentwin.com\ncareers@talentwin.com',
-      phone: 'Phone',
-      phoneNumbers: '+86 (21) 1234-5678\nMon-Fri, 9am-6pm',
-      followUs: 'Follow Us',
-      form: {
-        name: 'Name',
-        namePlaceholder: 'Your full name',
-        email: 'Email',
-        emailPlaceholder: 'your.email@company.com',
-        company: 'Company',
-        companyPlaceholder: 'Your company name',
-        message: 'Message',
-        messagePlaceholder: 'Tell us about your needs...',
-        submit: 'Send Message',
-        sending: 'Sending...',
-        successMessage: 'Thank you! We\'ll be in touch soon.',
-        errorMessage: 'Failed to send message. Please try again.'
-      }
+      title: 'Contact Information',
+      subtitle: 'Connecting Enterprises & Talents',
+      generalTitle: 'General Inquiries',
+      general: {
+        tele: '86 21 6044 6138',
+        web: 'www.talent-win.com'
+      },
+      keyContact: {
+        title: 'Key Contact',
+        name: 'Linda Li',
+        location: 'Location coverage: Shanghai',
+        cell: '18964966998',
+        email: 'lindali@talent-win.com'
+      },
+      closing: 'Looking forward to your cooperation!'
     },
     
     // Footer Section
@@ -235,28 +227,19 @@ export const translations = {
     
     // Contact Section - 联系方式
     contact: {
-      title: '联系我们',
-      subtitle: '准备好寻找合适的人才或探索下一个职业机会？让我们联系。',
-      location: '地址',
-      locationAddress: '中国 上海\n中国 北京',
-      email: '邮箱',
-      emailAddresses: 'hello@talentwin.com\ncareers@talentwin.com',
-      phone: '电话',
-      phoneNumbers: '+86 (21) 1234-5678\n周一至周五，上午9点至下午6点',
-      followUs: '关注我们',
-      form: {
-        name: '姓名',
-        namePlaceholder: '您的全名',
-        email: '邮箱',
-        emailPlaceholder: 'your.email@company.com',
-        company: '公司',
-        companyPlaceholder: '您的公司名称',
-        message: '留言',
-        messagePlaceholder: '告诉我们您的需求...',
-        submit: '发送消息',
-        sending: '发送中...',
-        successMessage: '感谢您！我们会尽快与您联系。',
-        errorMessage: '发送消息失败，请重试。'
+      title: '联系方式',
+      subtitle: '连接企业与人才',
+      generalTitle: '一般咨询',
+      general: {
+        tele: '86 21 6044 6138',
+        web: 'www.talent-win.com'
+      },
+      keyContact: {
+        title: '主要联系人',
+        name: 'Linda Li',
+        location: '上海',
+        cell: '18964966998',
+        email: 'lindali@talent-win.com'
       }
     },
     
