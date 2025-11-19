@@ -30,6 +30,13 @@
   margin-bottom: 1rem;
 }
 
+.footer-logo .logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .footer-logo .logo-icon {
   font-size: 1.8rem;
 }

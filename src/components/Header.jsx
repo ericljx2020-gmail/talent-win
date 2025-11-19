@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import './Header.css'
+import logo from '../assets/talent-win.png'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -28,8 +29,7 @@ function Header() {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
         <div className="logo">
-          <span className="logo-icon">🎯</span>
-          <span className="logo-text">TalentWin</span>
+          <img src={logo} alt="Talent-Win Logo" className="logo-image" />
         </div>
         
         <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>

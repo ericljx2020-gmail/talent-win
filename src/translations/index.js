@@ -10,78 +10,78 @@ export const translations = {
     
     // Hero Section
     hero: {
-      title: 'We help our clients change the world, one leadership team at a time',
-      description: 'Connecting exceptional leaders with transformative opportunities. Our executive search and leadership advisory services drive organizational excellence across industries.',
+      title: 'Matching the Right Talent for Long-term Win-Win Success',
+      description: 'Founded in 2007, Talent-Win specializes in mid-to-senior level executive search. We connect companies with the most suitable and high-potential management professionals, while providing clear career development paths for candidates.',
       contactUs: 'Contact Us',
       ourServices: 'Our Services',
-      companiesServed: '500+ Companies Served',
-      companiesDesc: 'Global reach, local expertise',
-      successRate: '95% Success Rate',
-      successDesc: 'Long-term placements',
+      companiesServed: 'Trusted by Leading Brands',
+      companiesDesc: 'Deep industry networks',
+      successRate: 'Professional & Efficient',
+      successDesc: 'Quality-driven delivery',
       imageAlt: 'Professional team collaboration'
     },
     
     // Stats Section
     stats: {
       companies: 'Companies Served',
-      placements: 'Placements Made',
+      placements: 'Successful Placements',
       satisfaction: 'Client Satisfaction',
-      experience: 'Years Experience'
+      experience: 'Years of Experience'
     },
     
     // Services Section
     services: {
       title: 'Our Services',
-      subtitle: 'We help organizations recruit exceptional leaders and build high-performing teams through our comprehensive suite of services',
+      subtitle: 'We provide professional executive search services focused on mid-to-senior level talent acquisition',
       executiveSearch: {
         title: 'Executive Search',
-        description: 'Find top-tier leadership talent for C-suite and senior management positions with our exclusive network.'
+        description: 'Targeted headhunting for mid-to-senior level positions, leveraging our extensive network and deep industry expertise.'
       },
       leadershipAdvisory: {
-        title: 'Leadership Advisory',
-        description: 'Strategic guidance for leadership development, succession planning, and organizational effectiveness.'
+        title: 'Management & Key Position Recruitment',
+        description: 'Specialized recruitment for management layers and critical roles that drive business success.'
       },
       corporateTransformation: {
-        title: 'Corporate Transformation',
-        description: 'Navigate complex organizational change with expert guidance on restructuring and cultural evolution.'
+        title: 'Talent Mapping & Market Insights',
+        description: 'Industry talent landscape analysis and market intelligence to support strategic hiring decisions.'
       },
       onDemandTalent: {
-        title: 'On-Demand Talent',
-        description: 'Access interim executives and specialized consultants for critical projects and transitions.'
+        title: 'Post-placement Support',
+        description: 'Long-term tracking and career development support to ensure successful integration and growth.'
       },
       organizationCulture: {
-        title: 'Organization & Culture',
-        description: 'Design and implement culture strategies that align with your business objectives.'
+        title: 'FMCG & Retail',
+        description: 'Deep expertise in fast-moving consumer goods and retail sectors including supply chain and operations.'
       },
       inclusiveLeadership: {
-        title: 'Inclusive Leadership',
-        description: 'Build diverse, equitable leadership teams that drive innovation and business performance.'
+        title: 'IT & Tech Innovation',
+        description: 'Specialized in IT, internet, and technology innovation fields with strong candidate networks.'
       }
     },
     
     // About Section
     about: {
-      overlayTitle: 'Our Purpose, Vision, and Values',
-      title: 'About TalentWin',
-      description1: 'With over 15 years of experience in executive search and recruitment, TalentWin has become a trusted partner for organizations seeking exceptional talent.',
-      description2: 'Our team of seasoned consultants brings deep industry expertise and an extensive network of top-tier professionals. We don\'t just fill positions – we forge long-term partnerships that drive business success.',
-      description3: 'Whether you\'re a growing startup or an established enterprise, we have the expertise and resources to meet your unique hiring needs.',
+      overlayTitle: 'Our Mission, Values, and Expertise',
+      title: 'About Talent-Win',
+      description1: 'Founded in 2007, Talent-Win is a professional headhunting firm specializing in mid-to-senior level talent recruitment. We are committed to finding the most suitable and high-potential management and professional talent for companies.',
+      description2: 'Our core consulting team comes from HR departments of renowned multinational companies, bringing deep industry understanding and extensive recruitment experience. We possess broad industry networks and high-quality talent pools, enabling efficient and precise completion of mid-to-senior level recruitment assignments.',
+      description3: 'Our clients include leading global brands such as Nestlé, Apple, Starbucks, Dyson, M&S, Inditex, Alibaba, and Cisco across FMCG, retail, supply chain, manufacturing, and technology sectors.',
       values: {
         excellence: {
-          title: 'Excellence',
-          description: 'We pursue the highest standards in every placement'
+          title: 'Efficient Execution',
+          description: 'High-quality delivery and efficient execution'
         },
         integrity: {
-          title: 'Integrity',
-          description: 'Honest, transparent relationships built on trust'
+          title: 'Professionalism & Integrity',
+          description: 'Built on trust and professional standards'
         },
         results: {
-          title: 'Results',
-          description: 'Focused on delivering measurable outcomes'
+          title: 'Win-Win Partnership',
+          description: 'Long-term collaboration for mutual success'
         },
         innovation: {
-          title: 'Innovation',
-          description: 'Leveraging technology for smarter recruitment'
+          title: 'Industry Network',
+          description: 'Deep industry connections and expertise'
         }
       },
       imageAlt: 'Our team'
@@ -90,13 +90,13 @@ export const translations = {
     // Contact Section
     contact: {
       title: 'Get In Touch',
-      subtitle: 'Ready to find your next great hire or career opportunity? Let\'s talk.',
+      subtitle: 'Ready to find the right talent or explore your next career opportunity? Let\'s connect.',
       location: 'Location',
-      locationAddress: '123 Business Ave, Suite 100\nNew York, NY 10001',
+      locationAddress: 'Shanghai, China\nBeijing, China',
       email: 'Email',
       emailAddresses: 'hello@talentwin.com\ncareers@talentwin.com',
       phone: 'Phone',
-      phoneNumbers: '+1 (555) 123-4567\nMon-Fri, 9am-6pm EST',
+      phoneNumbers: '+86 (21) 1234-5678\nMon-Fri, 9am-6pm',
       followUs: 'Follow Us',
       form: {
         name: 'Name',
@@ -116,13 +116,13 @@ export const translations = {
     
     // Footer Section
     footer: {
-      description: 'Connecting exceptional talent with outstanding opportunities since 2010.',
+      description: 'Professional headhunting services for mid-to-senior level talent since 2007.',
       services: {
         title: 'Services',
         executiveSearch: 'Executive Search',
-        permanentPlacement: 'Permanent Placement',
-        contractStaffing: 'Contract Staffing',
-        graduateRecruitment: 'Graduate Recruitment'
+        permanentPlacement: 'Management Recruitment',
+        contractStaffing: 'Talent Mapping',
+        graduateRecruitment: 'Post-placement Support'
       },
       company: {
         title: 'Company',
@@ -133,12 +133,12 @@ export const translations = {
       },
       contactInfo: {
         title: 'Contact',
-        address: '123 Business Ave, Suite 100',
-        city: 'New York, NY 10001',
+        address: 'Shanghai, China',
+        city: 'Beijing, China',
         email: 'hello@talentwin.com',
-        phone: '+1 (555) 123-4567'
+        phone: '+86 (21) 1234-5678'
       },
-      copyright: 'TalentWin. All rights reserved.',
+      copyright: 'Talent-Win. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       cookies: 'Cookie Policy'
@@ -156,21 +156,21 @@ export const translations = {
     
     // Hero Section - 主页横幅
     hero: {
-      title: '我们帮助客户改变世界，一次一个领导团队',
-      description: '将杰出的领导者与变革性机会联系起来。我们的高管猎头和领导力咨询服务推动各行业的组织卓越。',
+      title: '匹配最合适的人才，实现长期双赢',
+      description: '智翔咨询成立于2007年，专注于中高端人才招聘的专业猎头公司。我们致力于为企业寻找最适配、最具潜力的管理与专业人才，同时为候选人提供清晰的职业发展路径与机会。',
       contactUs: '联系我们',
       ourServices: '我们的服务',
-      companiesServed: '服务500+家企业',
-      companiesDesc: '全球视野，本地专长',
-      successRate: '95% 成功率',
-      successDesc: '长期稳定配置',
+      companiesServed: '知名品牌信赖',
+      companiesDesc: '深度行业网络',
+      successRate: '专业高效',
+      successDesc: '高质量交付',
       imageAlt: '专业团队协作'
     },
     
     // Stats Section - 数据统计
     stats: {
       companies: '服务企业',
-      placements: '成功配置',
+      placements: '成功案例',
       satisfaction: '客户满意度',
       experience: '年经验'
     },
@@ -178,56 +178,56 @@ export const translations = {
     // Services Section - 服务项目
     services: {
       title: '我们的服务',
-      subtitle: '我们通过全面的服务套件帮助组织招募杰出领导者并建立高绩效团队',
+      subtitle: '我们提供专业的中高端人才猎聘服务，致力于为企业匹配最合适的管理与专业人才',
       executiveSearch: {
-        title: '高管猎头',
-        description: '通过我们的独家网络为C级高管和高级管理职位寻找顶尖领导人才。'
+        title: '中高端人才定向猎聘',
+        description: '通过我们广泛的行业人脉网络及高质量人才库，以高效、精准的方式完成中高端岗位委托招聘。'
       },
       leadershipAdvisory: {
-        title: '领导力咨询',
-        description: '为领导力发展、继任计划和组织效能提供战略指导。'
+        title: '管理层与关键岗位招聘',
+        description: '专注于管理层及关键岗位的专业招聘服务，确保为企业找到推动业务成功的核心人才。'
       },
       corporateTransformation: {
-        title: '企业转型',
-        description: '在重组和文化演变方面提供专家指导，助力应对复杂的组织变革。'
+        title: '行业人才地图与市场洞察',
+        description: '提供行业人才市场分析与洞察，帮助企业制定战略性的人才招聘决策。'
       },
       onDemandTalent: {
-        title: '按需人才',
-        description: '为关键项目和过渡期提供临时高管和专业顾问。'
+        title: '入职后跟踪与发展支持',
+        description: '提供长期的入职后跟踪与人才发展支持，确保候选人成功融入并持续成长。'
       },
       organizationCulture: {
-        title: '组织与文化',
-        description: '设计和实施与您的业务目标相一致的文化战略。'
+        title: '快消与零售',
+        description: '在快消与零售领域拥有深厚专业知识，涵盖供应链、制造业、采购、商品及品类运营。'
       },
       inclusiveLeadership: {
-        title: '包容性领导力',
-        description: '建立多元化、公平的领导团队，推动创新和业务绩效。'
+        title: 'IT / 互联网 / 科技创新',
+        description: '专注于IT、互联网及科技创新领域，拥有强大的候选人网络与行业洞察。'
       }
     },
     
     // About Section - 关于我们
     about: {
-      overlayTitle: '我们的目标、愿景和价值观',
-      title: '关于 TalentWin',
-      description1: 'TalentWin在高管猎头和招聘领域拥有超过15年的经验，已成为寻求卓越人才的组织值得信赖的合作伙伴。',
-      description2: '我们经验丰富的顾问团队拥有深厚的行业专业知识和广泛的顶尖专业人士网络。我们不仅填补职位空缺，更致力于建立推动业务成功的长期合作关系。',
-      description3: '无论您是成长中的创业公司还是成熟的企业，我们都拥有专业知识和资源来满足您独特的招聘需求。',
+      overlayTitle: '我们的使命、价值观与专业领域',
+      title: '关于智翔咨询',
+      description1: '智翔咨询（Talent-Win）成立于2007年，是一家专注于中高端人才招聘的专业猎头公司。我们致力于为企业寻找最适配、最具潜力的管理与专业人才，实现企业与人才的长期双赢。',
+      description2: '智翔的核心顾问团队均来自知名跨国企业的人力资源体系，具备深厚的行业理解与丰富的招聘实战经验。我们拥有广泛的行业人脉网络及高质量人才库，能够以高效、精准的方式完成中高端岗位委托招聘。',
+      description3: '我们的客户包括雀巢（Nestlé）、苹果（Apple）、星巴克（Starbucks）、戴森（Dyson）、玛莎百货（M&S）、Inditex、阿里巴巴（Alibaba）、思科（Cisco）等知名企业，涵盖快消、零售、供应链、制造业及科技创新等领域。',
       values: {
         excellence: {
-          title: '卓越',
-          description: '在每次配置中追求最高标准'
+          title: '高效执行',
+          description: '高质量交付与高效执行'
         },
         integrity: {
-          title: '诚信',
-          description: '建立在信任基础上的诚实、透明关系'
+          title: '专业与诚信',
+          description: '建立在信任与专业标准之上'
         },
         results: {
-          title: '成果',
-          description: '专注于提供可衡量的结果'
+          title: '长期合作共赢',
+          description: '实现客户、人才与智翔三方共赢'
         },
         innovation: {
-          title: '创新',
-          description: '利用技术实现更智能的招聘'
+          title: '深度行业网络',
+          description: '广泛的行业人脉与专业知识'
         }
       },
       imageAlt: '我们的团队'
@@ -236,13 +236,13 @@ export const translations = {
     // Contact Section - 联系方式
     contact: {
       title: '联系我们',
-      subtitle: '准备好寻找您的下一个优秀人才或职业机会了吗？让我们谈谈。',
+      subtitle: '准备好寻找合适的人才或探索下一个职业机会？让我们联系。',
       location: '地址',
-      locationAddress: '商业大道123号，100套房\n纽约，NY 10001',
+      locationAddress: '中国 上海\n中国 北京',
       email: '邮箱',
       emailAddresses: 'hello@talentwin.com\ncareers@talentwin.com',
       phone: '电话',
-      phoneNumbers: '+1 (555) 123-4567\n周一至周五，上午9点至下午6点（美东时间）',
+      phoneNumbers: '+86 (21) 1234-5678\n周一至周五，上午9点至下午6点',
       followUs: '关注我们',
       form: {
         name: '姓名',
@@ -262,13 +262,13 @@ export const translations = {
     
     // Footer Section - 页脚
     footer: {
-      description: '自2010年以来，我们一直致力于将杰出人才与优秀机会联系起来。',
+      description: '自2007年以来，专注于中高端人才招聘的专业猎头服务。',
       services: {
         title: '服务',
-        executiveSearch: '高管猎头',
-        permanentPlacement: '永久配置',
-        contractStaffing: '合同人员',
-        graduateRecruitment: '应届生招聘'
+        executiveSearch: '中高端人才猎聘',
+        permanentPlacement: '管理层招聘',
+        contractStaffing: '人才地图',
+        graduateRecruitment: '入职后支持'
       },
       company: {
         title: '公司',
@@ -279,12 +279,12 @@ export const translations = {
       },
       contactInfo: {
         title: '联系方式',
-        address: '商业大道123号，100套房',
-        city: '纽约，NY 10001',
+        address: '中国 上海',
+        city: '中国 北京',
         email: 'hello@talentwin.com',
-        phone: '+1 (555) 123-4567'
+        phone: '+86 (21) 1234-5678'
       },
-      copyright: 'TalentWin. 版权所有。',
+      copyright: '智翔咨询. 版权所有。',
       privacy: '隐私政策',
       terms: '服务条款',
       cookies: 'Cookie政策'

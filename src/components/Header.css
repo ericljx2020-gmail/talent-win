@@ -31,6 +31,13 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   color: #000000;
+  cursor: pointer;
+}
+
+.logo-image {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo-icon {

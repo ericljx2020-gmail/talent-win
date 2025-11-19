@@ -1,6 +1,7 @@
 import React from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import './Footer.css'
+import logo from '../assets/talent-win.png'
 
 function Footer() {
   const { t } = useLanguage()
@@ -11,8 +12,7 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-section">
           <div className="footer-logo">
-            <span className="logo-icon">🎯</span>
-            <span className="logo-text">TalentWin</span>
+            <img src={logo} alt="Talent-Win Logo" className="logo-image" />
           </div>
           <p className="footer-description">
             {t.footer.description}
