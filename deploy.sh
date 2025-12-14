@@ -44,7 +44,7 @@ case $choice in
         docker-compose up -d --build
         echo ""
         echo "✅ Deployment complete!"
-        echo "🌐 Access your website at: http://localhost:8080"
+        echo "🌐 Access your website at: http://www.talent-win.com"
         echo ""
         echo "💡 Tip: Run './deploy.sh' and select option 4 to view logs"
         ;;
@@ -55,7 +55,7 @@ case $choice in
         docker-compose up -d --build
         echo ""
         echo "✅ Update complete!"
-        echo "🌐 Access your website at: http://localhost:8080"
+        echo "🌐 Access your website at: http://www.talent-win.com"
         ;;
     3)
         echo ""
