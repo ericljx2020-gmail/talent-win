@@ -56,6 +56,12 @@ function Footer() {
           <a href="#">{t.footer.cookies}</a>
         </div>
       </div>
+
+      <div className="footer-icp">
+        <a href="http://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+          浙ICP备2025219171号-1
+        </a>
+      </div>
     </footer>
   )
 }
